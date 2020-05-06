@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     ListView liste;
     //verilerin yer aldığı url için
     String url = "https://raw.githubusercontent.com/Sukriye26/BMT---342/master/index2.json";
+    //https://raw.githubusercontent.com/Sukriye26/BMT---342/master/index2.json
 
     RequestQueue queue; //bu kuyrugu networkController a göndericez url deki verileri getiricek
     SQLiteHandler db;
