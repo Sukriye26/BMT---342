@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="12dp"
@@ -8,7 +9,7 @@
     <ImageView
         android:layout_width="27dp"
         android:layout_height="27dp"
-        android:src="@drawable/woman"
+        android:src="@drawable/technology"
         android:layout_marginRight="4dp"
         android:layout_marginEnd="4dp"/>
     <TextView
@@ -18,7 +19,7 @@
         android:text="Menü1"
         android:textStyle="bold"
         android:textColor="#6F1E51"
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:id="@+id/txt">
 
     </TextView>

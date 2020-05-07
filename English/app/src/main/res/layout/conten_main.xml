@@ -45,7 +45,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyler_view"
-        android:background="#ffffff"
+        android:background="#62DAC7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/actionBarTop"
