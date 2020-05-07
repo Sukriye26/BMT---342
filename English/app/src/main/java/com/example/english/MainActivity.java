@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     SQLiteHandler db;
 
     String[] basliklar= new String[]{
-            "Recently Added", "Favorites", "Tales","Beginner - A1","Elementary - A2","Intermediate - B1"
+            "Recently Added", "Favorites", "Stories","Beginner - A1","Elementary - A2","Intermediate - B1"
     };
     String[] linkler = new  String[]{"0","00","1","2","3","4"};
 
