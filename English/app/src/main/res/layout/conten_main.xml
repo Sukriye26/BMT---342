@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/actionBarTop"
-        android:background="#622544">
+        android:background="#00AE94">
         <Button
             android:layout_height="60dp"
             android:layout_width="60dp"
@@ -45,7 +45,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyler_view"
-        android:background="#62DAC7"
+        android:background="#76DDD1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/actionBarTop"

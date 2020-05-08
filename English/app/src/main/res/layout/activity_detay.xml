@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:background="@drawable/deneme"
+    android:background="@drawable/music"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -10,13 +10,13 @@
     tools:context="com.example.english.DetayActivity">
 
 
-
     <SeekBar
+        android:id="@+id/seekbarPlay"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:id="@+id/seekbarPlay"
         android:layout_centerVertical="true"
-        ></SeekBar>
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"></SeekBar>
 
     <TextView
         android:id="@+id/basla"
@@ -25,7 +25,7 @@
         android:layout_below="@+id/seekbarPlay"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="18dp"
         android:text="00.00.00"
         android:textColor="#000000"></TextView>
 
@@ -36,9 +36,9 @@
         android:layout_below="@+id/seekbarPlay"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="00.00.00"
         android:textColor="#000000"></TextView>
 
@@ -46,19 +46,18 @@
         android:id="@+id/oynat"
         android:layout_width="71dp"
         android:layout_height="64dp"
-        android:layout_below="@+id/seekbarPlay"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/play"></Button>
 
     <Button
         android:id="@+id/like"
         android:layout_width="85dp"
         android:layout_height="65dp"
-        android:layout_below="@+id/oynat"
+        android:layout_below="@+id/seekbarPlay"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/favori"></Button>
 
     <com.google.android.gms.ads.AdView
