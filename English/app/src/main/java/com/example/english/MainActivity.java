@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             //JSON PARSE ETME VE SQLİTE KAYDETME
             try{
                 //json array yakalama
-                JSONArray icerik=response.getJSONArray("Sounds"); // (burdaki yani php deki listenin) ismi php içeriği değişince hata yapmamak için onunla aynı olmak zorunda
+                JSONArray icerik=response.getJSONArray("Hikayeler"); // (burdaki yani php deki listenin) ismi php içeriği değişince hata yapmamak için onunla aynı olmak zorunda
                 int uzunluk =icerik.length();
                 //her birinin içindeki objeyi alıp veritabanına kaydediyoruz
                 for (int i=0; i<uzunluk; i++){
