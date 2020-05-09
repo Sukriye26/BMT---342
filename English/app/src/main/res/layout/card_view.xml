@@ -12,7 +12,7 @@
         android:layout_height="700dp"
         android:id="@+id/card_view"
         android:layout_gravity="center"
-        android:background="#f2f2f2"
+        android:background="#76DDD1"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"

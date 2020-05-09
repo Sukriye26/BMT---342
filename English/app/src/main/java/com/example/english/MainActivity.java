@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 db.delete();
                 queue.add(new JsonObjectRequest(0,url, null ,new listener(),new error()));
-                Toast.makeText(MainActivity.this,"veriler senkronize ediliyor",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"syncing",Toast.LENGTH_SHORT).show();
             }
         });
         menum.addDrawerListener(new DrawerLayout.DrawerListener() {
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             //JSON PARSE ETME VE SQLİTE KAYDETME
             try{
                 //json array yakalama
-                JSONArray icerik=response.getJSONArray("Hikayeler"); // (burdaki yani php deki listenin) ismi php içeriği değişince hata yapmamak için onunla aynı olmak zorunda
+                JSONArray icerik=response.getJSONArray("Sounds"); // (burdaki yani php deki listenin) ismi php içeriği değişince hata yapmamak için onunla aynı olmak zorunda
                 int uzunluk =icerik.length();
                 //her birinin içindeki objeyi alıp veritabanına kaydediyoruz
                 for (int i=0; i<uzunluk; i++){

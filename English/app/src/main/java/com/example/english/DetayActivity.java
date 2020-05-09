@@ -171,12 +171,12 @@ public class DetayActivity extends AppCompatActivity  implements MediaPlayer.OnC
                 if(favori.equals("1")){
                     db.favorite_state(id,"0");
                     favorim.setBackgroundResource(R.drawable.favori);
-                    Toast.makeText(DetayActivity.this,"favorilerden çıkarıldı",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetayActivity.this,"removed from favorites",Toast.LENGTH_SHORT).show();
                     favori="0";
                 }else{
                     db.favorite_state(id,"1");
                     favorim.setBackgroundResource(R.drawable.nonfavori);
-                    Toast.makeText(DetayActivity.this,"favorilere eklendi",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetayActivity.this,"added to favorites",Toast.LENGTH_SHORT).show();
                     favori="1";
                 }
             }

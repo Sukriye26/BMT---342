@@ -26,8 +26,8 @@
             android:background="#76DDD1"
             android:id="@+id/leftdrawer_child"
             android:choiceMode="singleChoice"
-            android:divider="#1D3F2B"
-            android:dividerHeight="1dp"
+            android:divider="#000000"
+            android:dividerHeight="3dp"
             />
         <!-- android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" -->
