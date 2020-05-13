@@ -23,7 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.english.R;
-import com.example.english.mesajlaşma.Mesaj;
+import com.example.english.mesajlasma.Mesaj;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 

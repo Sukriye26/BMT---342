@@ -1,4 +1,4 @@
-package com.example.english.mesajlaşma;
+package com.example.english.mesajlasma;
 
 import android.app.Activity;
 import android.content.Context;
@@ -19,7 +19,7 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
     List<MesajModel> list;
     Activity activity;
     String username;
-    Boolean state;
+    Boolean state =false;
     int sent =1, reciever=2;
 
     public MesajAdapter(Context context, List<MesajModel> list, Activity activity, String username) {
@@ -46,7 +46,7 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MesajAdapter.ViewHolder holder, final int position) {
-        holder.txt.setText(list.get(position).getText().toString());
+        holder.txt.setText(list.get(position).getText());
 
     }
 
@@ -76,7 +76,9 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
 
     @Override
     public int getItemViewType(int position) {
-        if(list.get(position).getFrom().equals(username)){
+        // if (user.getPassword() != null && password.getText() != null && user.getPassword().equals(password.getText().toString())) {
+        //
+        if(list.get(position).getFrom()!= null){
             state =true;
             return sent;
         }

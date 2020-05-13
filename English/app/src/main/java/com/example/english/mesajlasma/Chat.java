@@ -1,4 +1,4 @@
-package com.example.english.mesajlaşma;
+package com.example.english.mesajlasma;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -65,17 +66,20 @@ public class Chat extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String edittext= msj.getText().toString();
-                msj.setText("");
+
                 mesajGonder(edittext);
-                loadMessage();
+                msj.setText("");
             }
         });
+
+
         yeni_liste=new ArrayList<>();
         listele=findViewById(R.id.listele);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(Chat.this,1);
         listele.setLayoutManager(layoutManager);
         mesajAdapter =new MesajAdapter(Chat.this,yeni_liste,Chat.this,username);
         listele.setAdapter(mesajAdapter);
+        loadMessage();
     }
     public void mesajGonder(String text){
         final String id=rf.child("Mesajlar").child(username).child(otherName).push().getKey();
@@ -106,6 +110,7 @@ public class Chat extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 MesajModel mesajModel =dataSnapshot.getValue(MesajModel.class);
+                Log.d("Mesajlar",mesajModel.toString());
                 yeni_liste.add(mesajModel);
                 mesajAdapter.notifyDataSetChanged();
                 listele.scrollToPosition(yeni_liste.size()-1);

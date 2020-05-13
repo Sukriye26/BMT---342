@@ -1,4 +1,4 @@
-package com.example.english.mesajlaşma;
+package com.example.english.mesajlasma;
 
 public class MesajModel {
     private String from;

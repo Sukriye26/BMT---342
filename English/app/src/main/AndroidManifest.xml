@@ -15,8 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".mesajlaşma.Chat"></activity>
-        <activity android:name=".mesajlaşma.Mesaj" />
+        <activity android:name=".mesajlasma.Chat"></activity>
+        <activity android:name=".mesajlasma.Mesaj" />
         <activity android:name=".metin_ses.MainActivity" />
 
         <meta-data

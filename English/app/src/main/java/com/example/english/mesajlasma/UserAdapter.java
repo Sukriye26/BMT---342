@@ -1,4 +1,4 @@
-package com.example.english.mesajlaşma;
+package com.example.english.mesajlasma;
 
 import android.app.Activity;
 import android.content.Context;
