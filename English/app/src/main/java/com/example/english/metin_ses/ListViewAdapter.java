@@ -1,4 +1,4 @@
-package com.example.english;
+package com.example.english.metin_ses;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.english.R;
 
 public class ListViewAdapter extends BaseAdapter {
     private Context context;

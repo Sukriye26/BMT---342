@@ -1,4 +1,4 @@
-package com.example.english;
+package com.example.english.metin_ses;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 
+import com.example.english.Giris;
+import com.example.english.R;
+
 public class Splash_Activity extends AppCompatActivity {
     public boolean internet(final Context context){
         final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
@@ -18,7 +21,7 @@ public class Splash_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_);
-        //eğer internet varsa main activity e git
+        //eğer internet varsa giriş activity e git
         if(internet(this)){
             Thread splashThread;
             splashThread =new Thread(){
@@ -30,7 +33,7 @@ public class Splash_Activity extends AppCompatActivity {
                     }catch (InterruptedException ex){
 
                     }finally {
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), Giris.class));
                         finish();
                     }
                 }
@@ -41,9 +44,9 @@ public class Splash_Activity extends AppCompatActivity {
 
         else{
             AlertDialog alert = new AlertDialog.Builder(this).create();
-            alert.setTitle("Bağlantı Hatası");
-            alert.setMessage("Lütfen internet bağlantınızı kontrol edip tekrar deneyiniz.");
-            alert.setButton(DialogInterface.BUTTON_NEUTRAL, "Tamam", new DialogInterface.OnClickListener() {
+            alert.setTitle("Connection Error");
+            alert.setMessage("Please check your internet connection and try again.");
+            alert.setButton(DialogInterface.BUTTON_NEUTRAL, "Okey", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     int pid =android.os.Process.myPid();

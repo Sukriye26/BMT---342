@@ -1,10 +1,8 @@
-package com.example.english;
+package com.example.english.metin_ses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.database.Cursor;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,18 +10,13 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
+import com.example.english.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.material.tabs.TabLayout;
-import com.squareup.picasso.Picasso;
 
 import java.util.concurrent.TimeUnit;
 
@@ -74,6 +67,8 @@ public class DetayActivity extends AppCompatActivity  implements MediaPlayer.OnC
         mediaPlayer= new MediaPlayer();
         mediaPlayer.setOnBufferingUpdateListener(this);
         mediaPlayer.setOnCompletionListener(this);
+
+
 
         //oynatma işlemi
         play.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +136,8 @@ public class DetayActivity extends AppCompatActivity  implements MediaPlayer.OnC
                 }
 
             }
+
+
         });
 
         bundle=getIntent().getExtras();

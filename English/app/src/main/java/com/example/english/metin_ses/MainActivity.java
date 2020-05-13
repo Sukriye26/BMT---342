@@ -1,4 +1,4 @@
-package com.example.english;
+package com.example.english.metin_ses;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -23,6 +22,8 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.english.R;
+import com.example.english.mesajlaşma.Mesaj;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -37,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
     List<Konular> list=new ArrayList<>();
     private RecyclerView recyclerView;
     //bu ikisini kullanarak recyclerview içine listedeki öğeleri koyucaz
+    String username;
     RecylerAdapter recylerAdapter;
     DrawerLayout menum;
-    Button menu_bttn,refresh;
+    Button menu_bttn,refresh,ask;
     ListView liste;
     //verilerin yer aldığı url için
     String url = "https://raw.githubusercontent.com/Sukriye26/BMT---342/master/index2.json";
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        username =getIntent().getExtras().getString("kadi");
         //reklamlar için
         AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -73,7 +76,18 @@ public class MainActivity extends AppCompatActivity {
         menum =findViewById(R.id.drawer_layout);
         menu_bttn=findViewById(R.id.menuBtn);
         refresh=findViewById(R.id.refreshBtn);
+        ask=findViewById(R.id.ask);
         liste =findViewById(R.id.leftdrawer_child);
+
+        ask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gecis = new Intent(MainActivity.this, Mesaj.class);
+                gecis.putExtra("kadi",username);
+                startActivity(gecis);
+            }
+        });
+
 
         refresh.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -200,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
         //içine kategorileri gönderiyorum
         //herseferinde içini temizleyerek başlıyor
         list.clear();
-        Cursor cur;
+        Cursor cur ;
         switch(cat){
 
             case "0":
@@ -209,6 +223,7 @@ public class MainActivity extends AppCompatActivity {
             case "00":
                 cur=db.getWritableDatabase().rawQuery("SELECT * FROM veriler WHERE favori=1  ORDER BY anahtar DESC",null);
                 break;
+
             default:
                 cur=db.getWritableDatabase().rawQuery("SELECT * FROM veriler WHERE kategori="+ cat +" ORDER BY anahtar DESC",null);
                 break;

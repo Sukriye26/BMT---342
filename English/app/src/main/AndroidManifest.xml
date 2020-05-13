@@ -15,12 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity android:name=".mesajlaşma.Chat"></activity>
+        <activity android:name=".mesajlaşma.Mesaj" />
+        <activity android:name=".metin_ses.MainActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
 
-        <activity android:name=".Splash_Activity">
+        <activity android:name=".metin_ses.Splash_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,10 +31,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Giris"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name=".DetayActivity"
+            android:name=".metin_ses.DetayActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask" />
     </application>

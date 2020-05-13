@@ -1,4 +1,4 @@
-package com.example.english;
+package com.example.english.metin_ses;
 
 public class Konular {
     private String id;

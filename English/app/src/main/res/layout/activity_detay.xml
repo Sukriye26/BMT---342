@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.english.DetayActivity">
+    tools:context="com.example.english.metin_ses.DetayActivity">
 
     <Button
         android:id="@+id/oynat"
@@ -64,6 +64,8 @@
         android:layout_marginTop="27dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/favori"></Button>
+
+
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

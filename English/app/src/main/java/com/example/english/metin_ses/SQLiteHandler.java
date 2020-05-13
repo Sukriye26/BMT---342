@@ -1,4 +1,4 @@
-package com.example.english;
+package com.example.english.metin_ses;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,9 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
-
-import java.sql.SQLData;
 import java.util.ArrayList;
 import java.util.List;
 

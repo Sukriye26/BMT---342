@@ -21,10 +21,10 @@
             >
         </Button>
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="match_parent"
             android:layout_marginStart="-16dp"
-            android:layout_marginLeft="-16dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/yeni"
             android:contentDescription="@string/app_name"
             >
@@ -39,6 +39,13 @@
             android:background="@drawable/homebtn">
             <!--en sağa yapıştırmak için  ParentRight ve ParentEnd-->
         </Button>
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ask"
+            android:layout_marginLeft="303dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ask"></Button>
 
 
     </RelativeLayout>
